@@ -12,7 +12,7 @@ INSERT INTO users(name, email, password, role) values ( 'test1', 'test1@gmail.co
 
 
 CREATE TABLE projects(
-                         id INTEGER PRIMARY KEY,
+                         id INTEGER PRIMARY KEY AUTO_INCREMENT,
                          name VARCHAR(100),
                          description VARCHAR(500),
                          status VARCHAR(20),
