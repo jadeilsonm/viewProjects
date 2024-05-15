@@ -1,22 +1,19 @@
 package br.edu.ifpe.viewprojects.shareds;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Connection implements IConnection {
+public class H2Connection implements IConnection {
 
-    private static final String URL = "jdbc:h2:~/viewprojects";
+    private static final String URL = "jdbc:h2:mem:viewprojects";
     private static final String USER = "SA";
 
-
-    public java.sql.Connection toConnect() {
-
+    public Connection toConnect() {
         java.sql.Connection conn = null;
         try {
-            System.out.println("Tentando se connectar");
             Class.forName("org.h2.Driver");
             conn = DriverManager.getConnection(URL, USER, "");
-            System.out.println("Conectou no banco de dados.");
         } catch (SQLException ex) {
             System.out.println("Erro: Não conseguiu conectar no BD.");
         } catch (ClassNotFoundException ex) {

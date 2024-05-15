@@ -1,4 +1,4 @@
-package br.edu.ifpe.viewprojects.Shareds;
+package br.edu.ifpe.viewprojects.shareds;
 
 public class FabricConnect {
 
@@ -6,11 +6,12 @@ public class FabricConnect {
 
     private FabricConnect() {
         if (connection == null) {
-            connection = new Connection();
+            connection = new H2Connection();
         }
     }
 
     public static IConnection getConnection() {
-        return connection;
+        System.out.println("Conectou no banco de dados.");
+        return new FabricConnect().connection;
     }
 }

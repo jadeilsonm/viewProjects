@@ -1,4 +1,4 @@
-package br.edu.ifpe.viewprojects.Shareds;
+package br.edu.ifpe.viewprojects.shareds;
 
 public interface IConnection {
     public java.sql.Connection toConnect();
