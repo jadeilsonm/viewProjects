@@ -1,4 +1,4 @@
-package br.edu.ifpe.viewprojects.Entites;
+package br.edu.ifpe.viewprojects.entites;
 
 public class User {
     private Integer id;

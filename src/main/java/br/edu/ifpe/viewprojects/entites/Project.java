@@ -1,12 +1,14 @@
-package br.edu.ifpe.viewprojects.Entites;
+package br.edu.ifpe.viewprojects.entites;
+
+import java.time.LocalDate;
 
 public class Project {
     private Integer id;
     private String name;
     private String description;
     private String status;
-    private String startDate;
-    private String endDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
     private Integer userId;
 
     public Project(Build build) {
@@ -51,19 +53,15 @@ public class Project {
         this.status = status;
     }
 
-    public String getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
-    }
-
-    public String getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(String endDate) {
+    public void setEndDateDate(LocalDate endDate) {
         this.endDate = endDate;
     }
 
@@ -75,13 +73,17 @@ public class Project {
         this.userId = userId;
     }
 
-    public class Build {
+    public void setStartDate(LocalDate date) {
+        this.startDate = date;
+    }
+
+    public static class Build {
         private Integer id;
         private String name;
         private String description;
         private String status;
-        private String startDate;
-        private String endDate;
+        private LocalDate startDate;
+        private LocalDate endDate;
         private Integer userId;
 
         public Build setId(Integer id) {
@@ -104,12 +106,12 @@ public class Project {
             return this;
         }
 
-        public Build setStartDate(String startDate) {
+        public Build setStartDate(LocalDate startDate) {
             this.startDate = startDate;
             return this;
         }
 
-        public Build setEndDate(String endDate) {
+        public Build setEndDate(LocalDate endDate) {
             this.endDate = endDate;
             return this;
         }
