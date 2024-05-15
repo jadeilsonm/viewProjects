@@ -1,21 +1,21 @@
-package br.edu.ifpe.viewprojects.Shareds;
+package br.edu.ifpe.viewprojects.shareds;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Connection implements IConnection {
 
-    private static final String URL = "jdbc:h2:mem:viewprojects";
-    private static final String USER = "sa";
-    private static final String PASSWORD = null;
+    private static final String URL = "jdbc:h2:~/viewprojects";
+    private static final String USER = "SA";
 
 
     public java.sql.Connection toConnect() {
 
         java.sql.Connection conn = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection(URL, USER, PASSWORD);
+            System.out.println("Tentando se connectar");
+            Class.forName("org.h2.Driver");
+            conn = DriverManager.getConnection(URL, USER, "");
             System.out.println("Conectou no banco de dados.");
         } catch (SQLException ex) {
             System.out.println("Erro: Não conseguiu conectar no BD.");
