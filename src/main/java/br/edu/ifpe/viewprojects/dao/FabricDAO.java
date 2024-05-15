@@ -1,4 +1,4 @@
-package br.edu.ifpe.viewprojects.Dao;
+package br.edu.ifpe.viewprojects.dao;
 
 public class FabricDAO {
 
