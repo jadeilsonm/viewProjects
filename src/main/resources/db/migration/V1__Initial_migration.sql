@@ -1,4 +1,3 @@
-SELECT 1 + 65;
 
 CREATE TABLE users (
                        id INT PRIMARY KEY AUTO_INCREMENT,
@@ -22,3 +21,5 @@ CREATE TABLE projects(
                          userId INTEGER,
                          FOREIGN KEY (userId) REFERENCES users(id)
 );
+
+select * from users;
